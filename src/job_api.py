@@ -4,10 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-APIFY_API_KEY = os.getenv('APIFY_API_KEY')
-os.environ['APIFY_API_KEY'] = APIFY_API_KEY
+APIFY_API_TOKEN = os.getenv('APIFY_API_TOKEN')
 
-apify_client = ApifyClient(APIFY_API_KEY)
+apify_client = ApifyClient(APIFY_API_TOKEN)
 
 def fetch_linkedin_jobs(search_query, location='Australia', rows = 40):
     run_input = {
